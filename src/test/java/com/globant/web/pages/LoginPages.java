@@ -16,8 +16,6 @@ public class LoginPages extends BasePage {
     @FindBy (id="login-button")
     private WebElement loginButton;
 
-
-
     //Métodos que permiten la interaccion con los objetos
     public void enterUserName(String user){
         userName.sendKeys(user);
