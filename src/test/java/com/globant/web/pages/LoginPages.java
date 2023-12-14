@@ -17,9 +17,6 @@ public class LoginPages extends BasePage {
     @FindBy (id="login-button")
     private WebElement loginButton;
 
-    @FindBy(className = "inventory_item_img")
-    private List<WebElement> inventoryItems;
-
     @FindBy(className = "title")
     private WebElement validateText;
 

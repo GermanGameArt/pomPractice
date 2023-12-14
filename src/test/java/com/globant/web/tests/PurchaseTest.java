@@ -5,17 +5,15 @@ import com.globant.web.pages.PurchasePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
-
-public class PurchaseTest extends BaseTest{
-
-    PurchasePage purchasePage;
+public class PurchaseTest extends BaseTest {
     @Test
-    public void testLogin(){
+    public void testPurchase(){
         LoginPages loginPages = getLoginPages();
+        PurchasePage purchasePage = getPurchasePage();
         loginPages.enterUserName("standard_user");
         loginPages.enterPassword("secret_sauce");
         loginPages.clickOnLogin();
         Assert.assertEquals(loginPages.getTextToValidate(),"Products");
+        purchasePage.clickOnAddButton();
     }
 }
