@@ -1,10 +1,15 @@
 package com.globant.web.tests;
 
 import com.globant.web.pages.LoginPages;
+import com.globant.web.pages.PurchasePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LoginTest extends BaseTest{
+import java.util.concurrent.TimeUnit;
+
+public class PurchaseTest extends BaseTest{
+
+    PurchasePage purchasePage;
     @Test
     public void testLogin(){
         LoginPages loginPages = getLoginPages();
