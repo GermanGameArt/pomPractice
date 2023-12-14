@@ -15,5 +15,14 @@ public class PurchaseTest extends BaseTest {
         loginPages.clickOnLogin();
         Assert.assertEquals(loginPages.getTextToValidate(),"Products");
         purchasePage.clickOnAddButton();
+        purchasePage.clickOnAddCart();
+        purchasePage.clickOnCart();
+        purchasePage.clickOnCheckout();
+        purchasePage.enterFirstName("Emily");
+        purchasePage.enterLastName("Davis");
+        purchasePage.enterPostalCode("Los Angeles, CA: 90001");
+        purchasePage.clickOnContinue();
+        purchasePage.clickOnFinishBtn();
+        Assert.assertEquals(purchasePage.getTextToValidate(),"Thank you for your order!");
     }
 }
